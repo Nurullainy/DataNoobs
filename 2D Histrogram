@@ -1,0 +1,7 @@
+count <- with(result, table(Fem_Score, Masc_Score))
+p <- plot_ly(OSRI_summary, x = ~Masculine, y = ~Feminine, z = ~count) %>%
+  layout(title = 'Feminity & Masculinity Distribution',
+         xaxis = list(showgrid = FALSE),
+         yaxis = list(showgrid = FALSE)) %>% 
+  add_histogram2d()
+p
